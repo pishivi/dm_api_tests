@@ -8,10 +8,10 @@ def post_v1_account_password():
     """
     url = "http://5.63.153.31:5051/v1/account/password"
 
-    payload = json.dumps({
+    payload = {
       "login": "<string>",
       "email": "<string>"
-    })
+    }
     headers = {
       'X-Dm-Auth-Token': '<string>',
       'X-Dm-Bb-Render-Mode': '<string>',
