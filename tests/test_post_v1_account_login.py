@@ -11,14 +11,17 @@ structlog.configure(
     ]
 )
 
+login = "psh118"
+email = "psh118@mail.ru"
+password = "pshpshpsh4"
 
 def test_post_v1_account_login():
     mailhog = MailhogApi(host="http://5.63.153.31:5025")
     api = DmApiAccount(host="http://5.63.153.31:5051")
     json = {
-        "login": "psh114",
-        "email": "psh114@mail.ru",
-        "password": "pshpshpsh4"
+        "login": login,
+        "email": email,
+        "password": password
     }
     response = api.account.post_v1_account(json=json)
     assert response.status_code == 201, f"Статус код ответа {response.status_code}, должен быть 201"
@@ -26,8 +29,8 @@ def test_post_v1_account_login():
     response = api.account.put_v1_account_token(token=token)
 
     json = {
-        "login": "psh114",
-        "password": "pshpshpsh4",
+        "login": login,
+        "password": password,
         "rememberMe": "True"
     }
     response = api.login.post_v1_account_login(json=json)
