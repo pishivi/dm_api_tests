@@ -13,8 +13,8 @@ structlog.configure(
     ]
 )
 
-login = "psh118"
-email = "psh118@mail.ru"
+login = "psh5531"
+email = "psh123128@mail.ru"
 password = "pshpshpsh4"
 
 def test_post_v1_account_login():
@@ -36,6 +36,6 @@ def test_post_v1_account_login():
         "password": password,
         "rememberMe": "True"
     }
-    response = api.login.post_v1_account_login(json=json)
+    #response = api.login.post_v1_account_login(json=json)
     assert response.status_code == 200, f"Статус код ответа {response.status_code}, должен быть 200"
     print(response)

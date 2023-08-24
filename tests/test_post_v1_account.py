@@ -10,8 +10,8 @@ structlog.configure(
         structlog.processors.JSONRenderer(indent = 4, sort_keys = True, ensure_ascii = False)
     ]
 )
-login = "psh120"
-email = "psh120@kk.aa"
+login = "psh121"
+email = "psh121@kk.aa"
 password = "pshpshpsh5"
 def test_post_v1_account():
     mailhog = MailhogApi(host="http://5.63.153.31:5025")

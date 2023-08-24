@@ -79,7 +79,7 @@ class AccountApi:
         """
 
         response = self.client.put(
-            path=f"v1/account/{token}",
+            path=f"/v1/account/{token}",
             **kwargs
         )
         return response
